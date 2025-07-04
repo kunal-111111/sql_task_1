@@ -1,0 +1,37 @@
+create table saloon_data (
+ id serial primary key,
+ staff varchar,
+ contact_no int,
+ email varchar unique,
+ address varchar,
+ age int)m
+
+ insert into saloon_data (staff,contact_no,email,address,age) values ('aman',11111,'agmail.com','aman_address',25)
+
+ select * from saloon_data
+
+ insert into saloon_data (staff,contact_no,email,address,age) values ('deepak',2222,'dgmail.com','deepak_address',28)
+
+--ERROR:  duplicate key value violates unique constraint "saloon_data_email_key"
+--Key (email)=(agmail.com) already exists. 
+
+ select * from saloon_data
+ 
+ --nextval('saloon_data_id_seq'::regclass)
+
+ select * from saloon_data
+
+ insert into saloon_data (staff,contact_no,email,address,age) 
+ values ('subham',4444,'s2gmail.com','subham_address',32),
+ ('tejas',5555,'tgmail.com','tejas_address',33),
+ ('naresh',6666,'ngmail.com','naresh_address',46),
+ ('kailash',2222,'kgmail.com','kailash_address',32)
+
+ select * from saloon_data
+
+
+ insert into saloon_data (staff,email,age) values ('sinvam','sgmail.com',26)
+
+ select * from saloon_data
+
+ 
